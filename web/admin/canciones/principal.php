@@ -15,10 +15,36 @@
         body::before {
             content: "";
             position:absolute;
-            width: 100%; height: 130%;
+            width: 100%; height: 110%;
             background-size: cover;
-            background-image: url(images/fondo.jpg);
+            background-image: url(/Parcial2/web/images/fondo.jpg);
 
         }
     </style>
 </head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+  <a class="navbar-brand" href="index.php">TP2 ACOSTA FABIO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/Parcial2/web/home.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Parcial2/web/generos.php">Generos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Parcial2/web/buscador.php">Buscador</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Parcial2/web/acceder.php">Login</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>

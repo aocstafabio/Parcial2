@@ -2,58 +2,30 @@
 session_start();
 
 require __DIR__ . '../../../../conn.php';
-require __DIR__ . "../../../../../header.php";
-require __DIR__ . "../../../../../nav.php";
 
 print_r($_POST);
 
 
-////////////////////////////////////////////// SUBIR IMAGEN ////////////////////////////////////////////////////
-$nombre_archivo=$_FILES['banner']['name'];
-$tipo_archivo=$_FILES['banner']['type'];
-$tamaño_archivo=$_FILES['banner']['size'];
-
-$destino = "../../../../images/".$nombre_archivo;
-
-if (!(($_FILES['banner']['type'] == "application/msword" || strpos($tipo_archivo, "jpeg")) && ($tamaño_archivo < 800000))) {
-        echo "La extensión o el tamaño del banner no es correcta. <br><br>
-        <table>
-        <tr><td>
-        <li>Se permiten archivos .jpg</li>
-        <li>Se permiten archivos de 800 Kb máximo.</li>
-        </td></tr>
-        </table>";
-
-    }else{
-
-    if (move_uploaded_file($_FILES['banner']['tmp_name'],  $destino)){
 
 
-    }else{
-        echo "Ocurrió algún error al subir la imagen. No pudo guardarse.";
-    
-        }
-        }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//$titulo = $_POST['titulo']; 
-//$artista = $_POST['artista'];
-//$genero = $_POST['genero'];
-//$banner = $_POST['banner'];
+if (isset($_FILES['banner']) && $_FILES['banner']['tmp_name']) {
+    $destino = __DIR__ . '../../../../../images/';
+    $nombre = uniqid();
+    $ext = pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION);
+    $banner = "$nombre.$ext";
+    move_uploaded_file($_FILES['banner']['tmp_name'], "$destino$banner");
+}
 
 
-
-
-$titulo = $_POST["titulo"]; 
-$artista = $_POST["artista"];
-
-
-$query = $db->prepare("INSERT INTO canciones (nombre, artista) VALUES ('$titulo','$artista')");
+$query = $db->prepare("INSERT INTO canciones (nombre, artista, banner, genero_id)
+ values (:nombre, :artista, :banner, :genero_id)");
 
 $query->execute([
-    'titulo' => $_POST["titulo"],
-    'artista' => $_POST["artista"],
-    'id' => $_POST["id"]
+    ':nombre' => $_POST["titulo"],
+    ':artista' => $_POST["artista"],
+    ':genero_id' => $_POST["genero_id"],    
+    ':banner' => $banner
+    
 ]);
 
 

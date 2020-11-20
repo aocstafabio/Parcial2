@@ -22,6 +22,9 @@ SET time_zone = "+00:00";
 -- Base de datos: `musica`
 --
 
+create database if not exists musica;
+use musica;
+
 -- --------------------------------------------------------
 
 --
@@ -70,7 +73,7 @@ INSERT INTO `canciones` (`id`, `nombre`, `artista`, `banner`, `Descrip`, `genero
 (6, 'By the Time I Get to Arizona ', 'Public Enemy', 'pe.jpg', 'Breve descripcion de la cancion que se muestra.', 4),
 (7, 'In Control', 'Baker Boy', 'ba.jpg', 'Breve descripcion de la cancion que se muestra.', 2),
 (8, 'La Marca De La Gorra', 'Mala Fama', 'mf.jpg', 'Breve descripcion de la cancion que se muestra.', 3),
-(9, 'prueba', 'prteuba', NULL, NULL, NULL),
+(9, 'prueba', 'prteuba', NULL, NULL, NULL);
 
 
 

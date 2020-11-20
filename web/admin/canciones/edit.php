@@ -1,6 +1,5 @@
 <?php
-require_once("../../header.php");
-require_once("../../nav.php");
+include_once("principal.php");
 require __DIR__ . '/../../../web/php/controllers/admin/canciones/edit.controller.php';
 
 session_start();

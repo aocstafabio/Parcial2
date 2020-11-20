@@ -2,12 +2,9 @@
 
 require __DIR__ . '/../../../conn.php';
 
-$query = $db->prepare('SELECT * FROM canciones WHERE id = :id');
-$query->execute([
-    'titulo' => $_POST["titulo"],
-    'artista' => $_POST["artista"],
-    'banner' => $_POST["banner"],
-    'id' => $_POST["id"]
-]);
 
-$cancion = $query->fetch(PDO::FETCH_OBJ);
+$query = $db->prepare("SELECT * FROM genero");
+
+$query->execute();
+
+$generos = $query->fetchAll(PDO::FETCH_OBJ);

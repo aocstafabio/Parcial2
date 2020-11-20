@@ -1,7 +1,7 @@
 <?php
-require_once("../../header.php");
-require_once("../../nav.php");
-//require __DIR__ . '/../../../web/php/controllers/admin/canciones/subir.controller.php';
+include_once("principal.php");
+require __DIR__ . '/../../php/controllers/admin/canciones/subir.controller.php';
+
 session_start();
 
 ?>
@@ -18,24 +18,18 @@ session_start();
                     <label for="artista">Artista</label>
                     <input type="text" class="form-control" id="artista" name="artista" value="">
                 </div>
-               <!-- <input type="hidden" name="id" value="<?php //echo $cancion->id ?>">-->
-          <label for="titulo">Genero: </label><br>
-                <input type="radio" id="genero1" name="rock" value=""> Rock <br>
-                <input type="radio" id="genero2" name="pop" value=""> Pop <br>
-                <input type="radio" id="genero3" name="cumbia" value=""> Cumbia<br>
-                <input type="radio" id="genero4" name="rap" value=""> Rap<br><br>
+                <label for="genero_id">Genero: </label><br>
+                <select name="genero_id" id="genero_id">
+                    <?php foreach ($generos as $genero) : ?>
+                        <option value="<?php echo $genero->id ?>"><?php echo $genero->nombre ?></option>
+                    <?php endforeach; ?>
+                </select>
                 <input type="hidden" name="id" value="">
-                <div class="form-group">
-          <input type="file" id="banner" name="banner" value=""><br><br>
+                <div class="form-group"> <br>
+                    <input type="file" id="banner" name="banner" value=""><br><br>
                     <button type="submit" class="btn btn-primary">Subir</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-
-<?php
-
-
-?>
-        

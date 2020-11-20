@@ -1,19 +1,13 @@
 <?php
 session_start();
-
-include_once("../../header.php");
-include_once("../../nav.php");
-
+include_once("principal.php");
 require __DIR__ . '/../../php/controllers/admin/canciones/index.controller.php';
 
 /*/if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
     header('location: /Parcial2/web/home.php');
 }/*/
 
-/*/
-session_start();
-require __DIR__ . '/../php/controllers/admin/canciones/index.controller.php'; ?>
-/*/
+
 ?>
 <div class="container">
     <div class="row">
@@ -26,15 +20,8 @@ require __DIR__ . '/../php/controllers/admin/canciones/index.controller.php'; ?>
                 <?php unset($_SESSION['alert']); ?>
             <?php endif; ?>
             <br><br>
-
-
-
-
             <button class="btn btn-primary" onclick="window.location.href='subir.php'">Subir</button><br><br>
-
-
-            
-            <table class="table table-bordered striped">
+            <table class="table table-striped table-dark">
                 <thead>
                     <tr>
                         <td>Título</td>
