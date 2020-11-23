@@ -2,13 +2,6 @@
 session_start();
 
 require __DIR__ . '/../../../conn.php';
-
-require __DIR__ . "../../../../../header.php";
-require __DIR__ . "../../../../../nav.php";
-
-//require_once("header.php");
-//require_once("nav.php");
-
 print_r($_POST);
 
 
@@ -28,5 +21,3 @@ $_SESSION['alert'] = [
 ];
 
 header('location: ../../../../admin/canciones/index.php');
-
-//$cancion = $query->fetch(PDO::FETCH_OBJ);

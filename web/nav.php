@@ -17,9 +17,17 @@
         <a class="nav-link" href="buscador.php">Buscador</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="acceder.php">Login</a>
+        <a class="nav-link" href="/Parcial2/web/admin/canciones/index.php">Editar</a>
+      </li>
+      <li class="nav-item">
+      <?php if(isset($_SESSION['auth'])):?>
+                    <a class="nav-link" href="logout.php">Cerrar sesion</a>
+                    <?php else: ?> 
+                    <a class="nav-link" href="acceder.php">Login</a>
+                    <?php endif ?>
       </li>
     </ul>
   </div>
   </div>
 </nav>
+

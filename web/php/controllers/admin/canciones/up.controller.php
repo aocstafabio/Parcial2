@@ -1,12 +1,8 @@
 <?php
 session_start();
-
 require __DIR__ . '../../../../conn.php';
 
 print_r($_POST);
-
-
-
 
 if (isset($_FILES['banner']) && $_FILES['banner']['tmp_name']) {
     $destino = __DIR__ . '../../../../../images/';

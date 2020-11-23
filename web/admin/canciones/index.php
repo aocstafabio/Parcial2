@@ -1,11 +1,11 @@
 <?php
-session_start();
 include_once("principal.php");
 require __DIR__ . '/../../php/controllers/admin/canciones/index.controller.php';
 
-/*/if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
-    header('location: /Parcial2/web/home.php');
-}/*/
+if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
+    header('location: /Parcial2/web/acceder.php');
+
+}
 
 
 ?>

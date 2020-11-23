@@ -13,10 +13,10 @@ echo '<pre>';
 
 var_dump($usuario);
 
-if ($usuario && $usuario->pass == $_POST['password']) {
+if ($usuario && password_verify($_POST['password'],$usuario->pass)) {
     $_SESSION['auth'] = true;
     $_SESSION['id'] = $usuario->id;
-    header('location: ../../admin/canciones/index.php');
+    header('location: /Parcial2/web/home.php');
 
 } else {
     $_SESSION['message'] = [

@@ -1,5 +1,5 @@
-<?php include_once("header.php");
-include_once("nav.php");
+<?php
+require __DIR__ . "/index.php";
 require 'php/generos/index.php';?>
 <br><br>
 

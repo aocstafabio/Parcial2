@@ -1,7 +1,6 @@
 <?php
 include_once("principal.php");
 require __DIR__ . '/../../php/controllers/admin/canciones/subir.controller.php';
-
 session_start();
 
 ?>

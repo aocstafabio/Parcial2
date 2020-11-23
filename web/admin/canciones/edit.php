@@ -4,17 +4,6 @@ require __DIR__ . '/../../../web/php/controllers/admin/canciones/edit.controller
 
 session_start();
 
-
-
-
-/*/if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
-    header('location: /Parcial2/web/home.php');
-}/*/
-
-/*/
-session_start();
-require __DIR__ . '/../php/controllers/admin/canciones/index.controller.php'; ?>
-/*/
 ?>
 
 <div class="container py-5">

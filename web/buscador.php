@@ -1,9 +1,6 @@
 <?php
-// require 'php/canciones/index.php';
+require __DIR__ . "/index.php";
 
-require_once("header.php");
-require_once("nav.php");
-session_start();
 
 ?>
 <div class="container">

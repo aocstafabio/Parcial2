@@ -9,4 +9,5 @@ if (isset( $_GET['genero_id'])) {
 
 $query = $db->prepare($sql); 
 $query->execute();
+
 $canciones = $query->fetchAll(PDO::FETCH_OBJ);

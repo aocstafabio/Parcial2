@@ -1,8 +1,7 @@
 <?php
 require 'php/canciones/index.php';
-include_once("header.php");
-include_once("nav.php");
-session_start();
+require __DIR__ . "/index.php";
+
 ?>
 
 
@@ -34,3 +33,4 @@ session_start();
         <?php endif; ?>
     </div>
 </div>
+
