@@ -49,7 +49,6 @@
         </li>
         <li class="nav-item">
           <?php session_start();
-
           if (isset($_SESSION['auth'])) : ?>
             <a class="nav-link" href="/Parcial2/web/logout.php">Cerrar sesion</a>
           <?php else : ?>

@@ -1,8 +1,7 @@
 <?php
 require __DIR__ . "/index.php";
-
-
 ?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">

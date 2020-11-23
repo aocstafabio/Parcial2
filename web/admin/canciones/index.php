@@ -4,15 +4,13 @@ require __DIR__ . '/../../php/controllers/admin/canciones/index.controller.php';
 
 if (!isset($_SESSION['auth']) || !$_SESSION['auth']) {
     header('location: /Parcial2/web/acceder.php');
+} ?>
 
-}
 
 
-?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-
             <?php if (isset($_SESSION['alert']) && $_SESSION['alert']['message']) : ?>
                 <div class="alert alert-<?php echo $_SESSION['alert']['type'] ?> ">
                     <?php echo $_SESSION['alert']['message']; ?>

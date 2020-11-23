@@ -1,9 +1,7 @@
 <?php
 require 'php/canciones/index.php';
 require __DIR__ . "/index.php";
-
 ?>
-
 
 
 <br><br>
@@ -33,4 +31,3 @@ require __DIR__ . "/index.php";
         <?php endif; ?>
     </div>
 </div>
-

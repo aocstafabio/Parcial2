@@ -10,10 +10,13 @@ include_once("header.php"); ?>
         <div class="row justify-content-center">
             <div class="col-6 col-md-6 my-5">
                 <div class="col-lg-12">
-                <h1> <center>BIENVENIDX</center> </h1><br>
-                <h6> <center>Logueate para acceder al sistema de gestión de música</center> </h6><br>
+                    <h1>
+                        <center>BIENVENIDX</center>
+                    </h1><br>
+                    <h6>
+                        <center>Logueate para acceder al sistema de gestión de música</center>
+                    </h6><br>
                     <div class="card my-3">
-                        
                         <h5 class="card-header">Login</h5>
                         <div class="card-body">
                             <?php include 'partials/message.php'; ?>

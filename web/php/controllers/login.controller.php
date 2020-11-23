@@ -9,9 +9,6 @@ $query = $db->prepare($sql);
 $query->execute();
 $usuario = $query->fetch(PDO::FETCH_OBJ);
 
-echo '<pre>';
-
-var_dump($usuario);
 
 if ($usuario && password_verify($_POST['password'],$usuario->pass)) {
     $_SESSION['auth'] = true;
@@ -25,5 +22,3 @@ if ($usuario && password_verify($_POST['password'],$usuario->pass)) {
     ];
     header('location: /Parcial2/web/acceder.php');
 }
-
-

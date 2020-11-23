@@ -20,5 +20,6 @@
             background-image: url(images/fondo.jpg);
 
         }
-    </style>
+ </style>
+
 </head>
